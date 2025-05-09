@@ -48,4 +48,4 @@ jobs:
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v4
       with:
-        path: bin
+        path: ./out/msvc-Win32/Release/
