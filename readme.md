@@ -72,20 +72,19 @@ Enjoy!
 
 ### Branches
 
-* `master`: latest stable release (still based on `dev2`).
+* `main`: latest stable release (still based on `dev2`).
 * `dev`:  development branch for mimalloc v1. **Use this branch for submitting PR's**.
 * `dev2`: development branch for mimalloc v2. This branch is downstream of `dev` 
           (and is essentially equal to `dev` except for `src/segment.c`). Uses larger sliced segments to manage
           mimalloc pages that can reduce fragmentation.
-* `dev3`: development branch for mimalloc v3-beta. This branch is downstream of `dev`. This version 
+* `dev3`: development branch for mimalloc v3-beta. This branch is also downstream of `dev`. This version 
           simplifies the lock-free ownership of previous versions, has no thread-local segments any more. 
-          This improves sharing of memory between threads, and on certain large workloads may use less memory 
-          with less fragmentation.
+          This improves sharing of memory between threads, and on certain large workloads may use (much) less memory.
 
 ### Releases
 
 * 2025-03-28, `v1.9.3`, `v2.2.3`, `v3.0.3` (beta): Various small bug and build fixes, including:
-  fix arm32 pre v7 builds, fix mingw build, get runtime statistics, improve statistic commit counts, 
+  fix arm32 pre-v7 builds, fix mingw build, get runtime statistics, improve statistic commit counts, 
   fix execution on non BMI1 x64 systems. 
 * 2025-03-06, `v1.9.2`, `v2.2.2`, `v3.0.2-beta`: Various small bug and build fixes. 
   Add `mi_options_print`, `mi_arenas_print`, and the experimental `mi_stat_get` and `mi_stat_get_json`. 
